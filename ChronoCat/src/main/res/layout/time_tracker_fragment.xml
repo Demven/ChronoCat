@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/time_tracker_texture"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:cropToPadding="false">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25"
+                android:background="@drawable/time_tracker_bg_top">
+
+            <Button
+                    android:id="@+id/button_show_list"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/time_tracker_show_list_button_bg"
+                    android:layout_alignParentLeft="true"/>
+
+            <Button
+                    android:id="@+id/button_show_graphs"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/time_tracker_show_graphs_button_bg"/>
+
+            <TextView
+                    android:id="@+id/spinner_all_works"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                    android:text="Занятие спортом" android:textAlignment="inherit" android:singleLine="false"
+                    android:clickable="true" android:textColor="#fff" android:gravity="center" android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="75">
+
+            <ImageView
+                    android:id="@+id/circle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/time_tracker_circle"/>
+
+            <Button
+                    android:id="@+id/start_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="45dp"
+                    android:background="@drawable/time_tracker_start_button_bg"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+        <TextView
+                android:id="@+id/time_tracker_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="08:17"
+                android:textColor="#707070"
+                android:textSize="24sp" android:layout_marginBottom="10dp"/>
+
+        <TextView
+                android:id="@+id/time_tracker_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19:24"
+                android:textColor="#fff"
+                android:textSize="110sp"/>
+
+        <TextView
+                android:id="@+id/time_tracker_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="00:24"
+                android:textColor="#707070"
+                android:textSize="24sp" android:layout_marginTop="10dp"/>
+    </LinearLayout>
+</RelativeLayout>

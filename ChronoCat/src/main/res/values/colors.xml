@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launch fragment -->
+    <color name="launch_main_bg">#000</color>
+    <color name="launch_top_bg">#242424</color>
+
+    <!-- Time-tracker fragment -->
+    <color name="time_tracker_main_bg">@null</color>
+    <color name="time_tracker_top_bg">#18148f</color>
+
+</resources>
