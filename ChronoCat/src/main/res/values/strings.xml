@@ -5,4 +5,13 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+
+    <array name="sample">
+        <item>ffdff</item>
+        <item>qwqdfecv</item>
+        <item>aasvasvasrbvasvgfa</item>
+        <item>adacase wf qwfw3r</item>
+        <item>awfawefdfaesfasf</item>
+        <item> EFAW FAF AEWF</item>
+    </array>
 </resources>
