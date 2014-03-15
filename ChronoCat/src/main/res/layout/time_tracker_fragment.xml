@@ -39,20 +39,35 @@
                     android:layout_alignParentRight="true"
                     android:background="@drawable/time_tracker_show_graphs_button_bg"/>
 
-            <TextView
+            <Spinner
                     android:id="@+id/spinner_all_works"
-                    android:layout_width="250dp"
-                    android:layout_height="25dp"
+                    android:layout_width="234dp"
+                    android:layout_height="34dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="70dp"
-                    android:text="Занятие спортом" android:textAlignment="inherit" android:singleLine="false"
-                    android:clickable="true" android:textColor="#fff" android:gravity="center" android:textSize="16sp"/>
+                    android:background="@drawable/time_tracker_all_works_button_bg"
+                    android:entries="@array/sample"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp"/>
+
+            <Button
+                    android:id="@+id/button_all_works"
+                    android:layout_width="250dp"
+                    android:layout_height="34dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/time_tracker_all_works_button_bg"
+                    android:text="Занятие спортом"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp"/>
         </RelativeLayout>
 
         <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="240dp"
                 android:layout_height="0dp"
-                android:layout_weight="75">
+                android:layout_weight="75" android:layout_gravity="center_horizontal">
 
             <ImageView
                     android:id="@+id/circle"
@@ -70,7 +85,38 @@
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="45dp"
-                    android:background="@drawable/time_tracker_start_button_bg"/>
+                    android:background="@drawable/time_tracker_start_button_bg"
+                    android:longClickable="true"/>
+
+            <Button
+                    android:id="@+id/stop_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="45dp"
+                    android:background="@drawable/time_tracker_stop_button_bg"
+                    android:visibility="gone"/>
+
+            <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="60dp"
+                    android:background="@drawable/time_tracker_back_button_bg"
+                    android:visibility="gone"/>
+
+            <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="60dp"
+                    android:background="@drawable/time_tracker_cancel_button_bg"
+                    android:visibility="gone"/>
 
         </RelativeLayout>
 
@@ -87,10 +133,11 @@
                 android:id="@+id/time_tracker_start_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
                 android:text="08:17"
                 android:textColor="#707070"
-                android:textSize="24sp" android:layout_marginBottom="10dp"/>
+                android:textSize="24sp"
+                android:visibility="gone"/>
 
         <TextView
                 android:id="@+id/time_tracker_current_time"
@@ -104,9 +151,10 @@
                 android:id="@+id/time_tracker_total_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
                 android:text="00:24"
                 android:textColor="#707070"
-                android:textSize="24sp" android:layout_marginTop="10dp"/>
+                android:textSize="24sp"
+                android:visibility="gone"/>
     </LinearLayout>
 </RelativeLayout>

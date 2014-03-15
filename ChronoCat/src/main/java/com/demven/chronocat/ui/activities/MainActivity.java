@@ -5,20 +5,18 @@ import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.demven.chronocat.R;
+import com.demven.chronocat.ui.fragments.LaunchFragment;
 import com.demven.chronocat.ui.fragments.TimeTrackerFragment;
 
 public class MainActivity extends FragmentActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_container, new TimeTrackerFragment())
-                    .commit();
-        }
+        showLaunch();
     }
 
 
@@ -40,5 +38,23 @@ public class MainActivity extends FragmentActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Shows launch screen
+     */
+    public void showLaunch(){
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.fragment_container, new LaunchFragment())
+                .commit();
+    }
+
+    /**
+     * Shows screen with time-tracker
+     */
+    public void showTimeTracker(){
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.fragment_container, new TimeTrackerFragment())
+                .commit();
     }
 }

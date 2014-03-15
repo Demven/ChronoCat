@@ -1,6 +1,7 @@
 package com.demven.chronocat.ui.fragments;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import com.demven.chronocat.R;
+import com.demven.chronocat.ui.activities.MainActivity;
 
 /**
  * Fragment, that represents the start-screen, that shows application's load progress.
@@ -16,6 +18,10 @@ import com.demven.chronocat.R;
  * @since 11.03.2014
  */
 public class LaunchFragment extends Fragment{
+
+    private final int LAUNCH_DELAY = 3000; // milliseconds
+
+    private Handler handler = new Handler();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -30,6 +36,18 @@ public class LaunchFragment extends Fragment{
 
         hourArrow.startAnimation(hourArrowRotate);
         minuteArrow.startAnimation(minuteArrowRotate);
+
         return rootView;
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                ((MainActivity) getActivity()).showTimeTracker();
+            }
+        }, LAUNCH_DELAY);
     }
 }
