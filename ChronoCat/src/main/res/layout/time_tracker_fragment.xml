@@ -27,8 +27,9 @@
                     android:layout_height="25dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginLeft="12dp"
+                    android:layout_alignParentLeft="true"
                     android:background="@drawable/time_tracker_show_list_button_bg"
-                    android:layout_alignParentLeft="true"/>
+                    android:onClick="showList"/>
 
             <Button
                     android:id="@+id/button_show_graphs"
@@ -42,10 +43,10 @@
             <Spinner
                     android:id="@+id/spinner_all_works"
                     android:layout_width="234dp"
-                    android:layout_height="34dp"
+                    android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="70dp"
-                    android:background="@drawable/time_tracker_all_works_button_bg"
+                    android:layout_marginTop="104dp"
+                    android:background="@null"
                     android:entries="@array/sample"
                     android:gravity="center"
                     android:textColor="#fff"

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/time_tracker_texture"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:cropToPadding="false">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25"
+                android:background="@drawable/time_tracker_bg_top">
+
+            <Button
+                    android:id="@+id/button_show_previous_day"
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/arrow_left_button_bg"
+                    android:layout_alignParentLeft="true"/>
+
+            <Button
+                    android:id="@+id/button_show_next_day"
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/arrow_right_button_bg"/>
+
+            <TextView
+                    android:id="@+id/list_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="03.10.2014"
+                    android:textColor="#fff"
+                    android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/working_time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="12dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/button_show_previous_day"
+                android:text="РАБОТА - "
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+            <TextView
+                    android:id="@+id/working_time_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/working_time_title"
+                    android:layout_below="@id/button_show_previous_day"
+                    android:text="03:14"
+                    android:textColor="#fff"
+                    android:textSize="16sp"/>
+
+            <TextView
+                    android:id="@+id/total_time_tile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_toLeftOf="@+id/total_time_value"
+                    android:layout_below="@id/button_show_next_day"
+                    android:text="ВСЕГО - "
+                    android:textColor="#fff"
+                    android:textSize="16sp"/>
+            <TextView
+                    android:id="@id/total_time_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/button_show_next_day"
+                    android:text="04:57"
+                    android:textColor="#fff"
+                    android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="75">
+        </RelativeLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="84dp">
+
+        <ListView
+                android:id="@+id/list_of_works_for_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>
