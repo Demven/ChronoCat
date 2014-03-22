@@ -7,4 +7,4 @@ Version: -
 
 Development start: 08.03.2014
 
-Development progress: 6%
+Development progress: 13%
