@@ -13,6 +13,7 @@ public class FontManager {
     private final String FONTS_DIR = "fonts/";
 
     public static final String BRIE_LIGHT = "brie_light.ttf";
+    public static final String ARL_NARROW = "arl_narrow.ttf";
 
     public Typeface getTypeface(String fontName, Context context){
         return Typeface.createFromAsset(context.getAssets(), FONTS_DIR + fontName);

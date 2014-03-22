@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,14 +15,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.*;
 import com.demven.chronocat.ChronoCatApplication;
 import com.demven.chronocat.R;
+import com.demven.chronocat.data.beans.Category;
 import com.demven.chronocat.managers.FontManager;
 import com.demven.chronocat.receivers.MinuteReceiver;
+import com.demven.chronocat.ui.adapters.TimeTrackerListAdapter;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
@@ -31,6 +33,10 @@ import java.util.Calendar;
  * @since 11.03.2014
  */
 public class TimeTrackerFragment extends Fragment {
+
+    public static final int STATE_CANCELED = 1;
+    public static final int STATE_STARTED = 2;
+    private int currentState = STATE_CANCELED;
 
     private TextView startTime;
     private TextView currentTime;
@@ -44,9 +50,13 @@ public class TimeTrackerFragment extends Fragment {
     private AlarmManager alarmManager;
     private PendingIntent pendingIntent;
 
-    public static final int STATE_CANCELED = 1;
-    public static final int STATE_STARTED = 2;
-    private int currentState = STATE_CANCELED;
+    // For list of categories
+    private ListView categoriesList;
+    private RelativeLayout listContainer;
+    private Button buttonAllWorks;
+    private ArrayList<Category> categories = new ArrayList<Category>();
+    private boolean isListVisible = false;
+    private int currentListPosition = 0;
 
     // For BroadcastReceiver
     public final static String RETURN_ACTION_MINUTE =
@@ -84,16 +94,10 @@ public class TimeTrackerFragment extends Fragment {
         // Show current time
         updateCurrentTime();
 
-        // Prepare spinner
-        final Spinner spinnerAllWorks = (Spinner) rootView.findViewById(R.id.spinner_all_works);
-        Button buttonAllWorks = (Button) rootView.findViewById(R.id.button_all_works);
-
-        buttonAllWorks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spinnerAllWorks.performClick();
-            }
-        });
+        // Prepare list and button over it
+        categoriesList = (ListView) rootView.findViewById(R.id.categories_list);
+        buttonAllWorks = (Button) rootView.findViewById(R.id.button_all_works);
+        listContainer = (RelativeLayout) rootView.findViewById(R.id.categories_list_container);
 
         return rootView;
     }
@@ -163,6 +167,20 @@ public class TimeTrackerFragment extends Fragment {
                 currentState = STATE_CANCELED;
             }
         });
+
+        categories.add(new Category(1l, "Начало рабочего дня", Color.parseColor("#ffffff")));
+        categories.add(new Category(2l, "Болтовня, чай", Color.parseColor("#4a47d2")));
+        categories.add(new Category(3l, "Работа", Color.parseColor("#096322")));
+        categories.add(new Category(4l, "Обед", Color.parseColor("#ffffff")));
+        categories.add(new Category(5l, "Спорт", Color.parseColor("#ffffff")));
+        categories.add(new Category(6l, "Страдание фигней", Color.parseColor("#4a47d2")));
+        categories.add(new Category(3l, "Работа", Color.parseColor("#096322")));
+        categories.add(new Category(4l, "Обед", Color.parseColor("#ffffff")));
+        categories.add(new Category(5l, "Спорт", Color.parseColor("#ffffff")));
+        categories.add(new Category(6l, "Страдание фигней", Color.parseColor("#4a47d2")));
+
+        prepareList();
+        prepareButtonOverSpinner();
     }
 
     @Override
@@ -170,6 +188,50 @@ public class TimeTrackerFragment extends Fragment {
         super.onStop();
         alarmManager.cancel(pendingIntent);
         getActivity().unregisterReceiver(broadcastReceiver);
+    }
+
+    private void prepareList(){
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) categoriesList.getLayoutParams();
+        Log.e("first height", "" + params.height);
+        int defaultItemHeight = params.height/7;
+        Log.e("defaultItemHeight", "" + defaultItemHeight);
+        if(categories.size() < 7){
+            // trim list to size of total items' height
+            params.height = categories.size() * defaultItemHeight;
+            Log.e("new height", "" + params.height);
+        }
+        categoriesList.setLayoutParams(params);
+
+        TimeTrackerListAdapter listAdapter = new TimeTrackerListAdapter(getActivity(), categories);
+        categoriesList.setAdapter(listAdapter);
+        categoriesList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                currentListPosition = position;
+                buttonAllWorks.setText(categories.get(currentListPosition).getName());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+    }
+
+    private void prepareButtonOverSpinner(){
+        // Set default title on the button, so that it will reflect current title in the spinner
+        buttonAllWorks.setText(categories.get(currentListPosition).getName());
+        buttonAllWorks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isListVisible){
+                    listContainer.setVisibility(View.GONE);
+                    isListVisible = false;
+                } else{
+                    listContainer.setVisibility(View.VISIBLE);
+                    isListVisible = true;
+                }
+            }
+        });
     }
 
     private void updateCurrentTime(){

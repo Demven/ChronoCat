@@ -40,18 +40,6 @@
                     android:layout_alignParentRight="true"
                     android:background="@drawable/time_tracker_show_graphs_button_bg"/>
 
-            <Spinner
-                    android:id="@+id/spinner_all_works"
-                    android:layout_width="234dp"
-                    android:layout_height="0dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="104dp"
-                    android:background="@null"
-                    android:entries="@array/sample"
-                    android:gravity="center"
-                    android:textColor="#fff"
-                    android:textSize="20sp"/>
-
             <Button
                     android:id="@+id/button_all_works"
                     android:layout_width="250dp"
@@ -158,4 +146,74 @@
                 android:textSize="24sp"
                 android:visibility="gone"/>
     </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/categories_list_container"
+            android:layout_width="260dp"
+            android:layout_height="324dp"
+            android:layout_marginTop="104dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+        <ListView
+                android:id="@+id/categories_list"
+                android:layout_width="260dp"
+                android:layout_height="252dp"
+                android:minHeight="36dp"
+                android:divider="@null"/>
+
+        <LinearLayout
+                android:id="@+id/categories_list_footer"
+                android:layout_width="260dp"
+                android:layout_height="66dp"
+                android:layout_below="@id/categories_list"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:orientation="horizontal">
+
+                <View
+                        android:layout_width="30dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/time_tracker_list_item_left_side_bg"/>
+
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1">
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#242424"
+                            android:gravity="center"
+                            android:alpha="0.8"/>
+
+                    <Button
+                            android:id="@+id/list_footer_button"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:background="@drawable/time_tracker_list_footer_button_bg"/>
+
+                </RelativeLayout>
+
+                <View
+                        android:layout_width="30dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/time_tracker_list_item_right_side_bg"/>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/time_tracker_list_footer_shadow"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
 </RelativeLayout>
