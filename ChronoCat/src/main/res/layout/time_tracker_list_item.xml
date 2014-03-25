@@ -7,8 +7,9 @@
         android:orientation="horizontal">
 
     <View
-            android:layout_width="30dp"
-            android:layout_height="36dp"
+            android:id="@+id/left_side"
+            android:layout_width="@dimen/time_tracker_list_item_left_side_width"
+            android:layout_height="@dimen/time_tracker_list_item_left_side_height"
             android:background="@drawable/time_tracker_list_item_left_side_bg"/>
 
     <RelativeLayout
@@ -17,9 +18,10 @@
             android:layout_weight="1">
 
         <View
+                android:id="@+id/item_background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#242424"
+                android:background="@color/time_tracker_list_item_bg"
                 android:gravity="center"
                 android:alpha="0.8"/>
 
@@ -28,21 +30,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Начало рабочего дня"
-                android:textSize="16sp"
-                android:textColor="#ffffff"
+                android:textSize="@dimen/time_tracker_list_item_category_name_text"
+                android:textColor="@color/time_tracker_list_item_text"
                 android:gravity="center"/>
 
         <View
+                android:id="@+id/item_divider"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/time_tracker_list_item_item_divider_height"
+                android:layout_marginLeft="@dimen/time_tracker_list_item_item_divider_margin_left"
+                android:layout_marginRight="@dimen/time_tracker_list_item_item_divider_margin_right"
                 android:layout_alignParentBottom="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="#575757"/>
+                android:background="@color/time_tracker_list_divider_bg"/>
     </RelativeLayout>
 
     <View
-            android:layout_width="30dp"
-            android:layout_height="36dp"
+            android:id="@+id/right_side"
+            android:layout_width="@dimen/time_tracker_list_item_right_side_width"
+            android:layout_height="@dimen/time_tracker_list_item_right_side_height"
             android:background="@drawable/time_tracker_list_item_right_side_bg"/>
 </LinearLayout>

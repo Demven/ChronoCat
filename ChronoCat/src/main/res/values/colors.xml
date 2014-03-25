@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Main Activity -->
+    <color name="main_activity_bg">#000</color>
+
     <!-- Launch fragment -->
     <color name="launch_main_bg">#000</color>
     <color name="launch_top_bg">#242424</color>
@@ -7,5 +10,29 @@
     <!-- Time-tracker fragment -->
     <color name="time_tracker_main_bg">@null</color>
     <color name="time_tracker_top_bg">#18148f</color>
+    <color name="time_tracker_button_all_works_text">#fff</color>
+    <color name="time_tracker_button_all_works_default_bg">@null</color>
+    <color name="time_tracker_button_all_works_default_border">#222</color>
+    <color name="time_tracker_button_all_works_selected_bg">@null</color>
+    <color name="time_tracker_button_all_works_selected_border">#484848</color>
+    <color name="time_tracker_start_time_text">#707070</color>
+    <color name="time_tracker_current_time_text">#fff</color>
+    <color name="time_tracker_total_time_text">#707070</color>
+    <color name="time_tracker_list_footer_bg">#242424</color>
+    <color name="time_tracker_list_item_bg">#242424</color>
+    <color name="time_tracker_list_item_left_side_gradient_start">@null</color>
+    <color name="time_tracker_list_item_left_side_gradient_end">#000</color>
+    <color name="time_tracker_list_item_right_side_gradient_start">#000</color>
+    <color name="time_tracker_list_item_right_side_gradient_end">@null</color>
+    <color name="time_tracker_list_item_text">#fff</color>
+    <color name="time_tracker_list_divider_bg">#575757</color>
+
+    <!-- Work-list fragment -->
+    <color name="work_list_list_date_text">#fff</color>
+    <color name="work_list_working_time_text">#fff</color>
+    <color name="work_list_total_time_text">#fff</color>
+    <color name="work_list_item_description_text">#777</color>
+    <color name="work_list_item_period_text">#ccc</color>
+    <color name="work_list_item_divider_bg">#777</color>
 
 </resources>

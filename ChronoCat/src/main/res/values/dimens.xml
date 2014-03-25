@@ -3,4 +3,128 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+
+    <!-- Time-tracker fragment -->
+    <dimen name="time_tracker_button_show_list_width">25dp</dimen>
+    <dimen name="time_tracker_button_show_list_height">25dp</dimen>
+    <dimen name="time_tracker_button_show_list_margin_top">8dp</dimen>
+    <dimen name="time_tracker_button_show_list_margin_left">12dp</dimen>
+
+    <dimen name="time_tracker_button_show_graphs_width">25dp</dimen>
+    <dimen name="time_tracker_button_show_graphs_height">25dp</dimen>
+    <dimen name="time_tracker_button_show_graphs_margin_top">8dp</dimen>
+    <dimen name="time_tracker_button_show_graphs_margin_right">12dp</dimen>
+
+    <dimen name="time_tracker_button_all_works_width">250dp</dimen>
+    <dimen name="time_tracker_button_all_works_height">34dp</dimen>
+    <dimen name="time_tracker_button_all_works_margin_top">70dp</dimen>
+    <dimen name="time_tracker_button_all_works_text">20sp</dimen>
+
+    <dimen name="time_tracker_tracker_controls_container_width">240dp</dimen>
+
+    <dimen name="time_tracker_circle_width">80dp</dimen>
+    <dimen name="time_tracker_circle_height">80dp</dimen>
+    <dimen name="time_tracker_circle_margin_bottom">30dp</dimen>
+
+    <dimen name="time_tracker_start_button_width">50dp</dimen>
+    <dimen name="time_tracker_start_button_height">50dp</dimen>
+    <dimen name="time_tracker_start_button_margin_bottom">45dp</dimen>
+
+    <dimen name="time_tracker_stop_button_width">50dp</dimen>
+    <dimen name="time_tracker_stop_button_height">50dp</dimen>
+    <dimen name="time_tracker_stop_button_margin_bottom">45dp</dimen>
+
+    <dimen name="time_tracker_back_button_width">25dp</dimen>
+    <dimen name="time_tracker_back_button_height">20dp</dimen>
+    <dimen name="time_tracker_back_button_margin_bottom">60dp</dimen>
+
+    <dimen name="time_tracker_cancel_button_width">25dp</dimen>
+    <dimen name="time_tracker_cancel_button_height">20dp</dimen>
+    <dimen name="time_tracker_cancel_button_margin_bottom">60dp</dimen>
+
+    <dimen name="time_tracker_start_time_margin_bottom">10dp</dimen>
+    <dimen name="time_tracker_start_time_text">24sp</dimen>
+
+    <dimen name="time_tracker_current_time_text">110sp</dimen>
+
+    <dimen name="time_tracker_total_time_margin_top">10dp</dimen>
+    <dimen name="time_tracker_total_time_text">24sp</dimen>
+
+    <dimen name="time_tracker_categories_list_container_width">260dp</dimen>
+    <dimen name="time_tracker_categories_list_container_height">324dp</dimen>
+    <dimen name="time_tracker_categories_list_container_margin_top">104dp</dimen>
+
+    <dimen name="time_tracker_categories_list_width">260dp</dimen>
+    <dimen name="time_tracker_categories_list_height">252dp</dimen>
+
+    <dimen name="time_tracker_categories_list_footer_width">260dp</dimen>
+    <dimen name="time_tracker_categories_list_footer_height">66dp</dimen>
+
+    <dimen name="time_tracker_categories_list_footer_button_width">32dp</dimen>
+    <dimen name="time_tracker_categories_list_footer_button_height">32dp</dimen>
+
+
+    <!-- Time-tracker list item -->
+    <dimen name="time_tracker_list_item_left_side_width">30dp</dimen>
+    <dimen name="time_tracker_list_item_left_side_height">36dp</dimen>
+
+    <dimen name="time_tracker_list_item_category_name_text">16sp</dimen>
+
+    <dimen name="time_tracker_list_item_item_divider_height">1dp</dimen>
+    <dimen name="time_tracker_list_item_item_divider_margin_left">15dp</dimen>
+    <dimen name="time_tracker_list_item_item_divider_margin_right">15dp</dimen>
+
+    <dimen name="time_tracker_list_item_right_side_width">30dp</dimen>
+    <dimen name="time_tracker_list_item_right_side_height">36dp</dimen>
+
+
+    <!-- Time-tracker DRAWABLES -->
+    <dimen name="time_tracker_all_works_bg_default_radius">8dp</dimen>
+    <dimen name="time_tracker_all_works_bg_default_stroke_width">1dp</dimen>
+
+    <dimen name="time_tracker_all_works_bg_selected_radius">8dp</dimen>
+    <dimen name="time_tracker_all_works_bg_selected_stroke_width">1dp</dimen>
+
+
+    <!-- Work-list fragment -->
+    <dimen name="work_list_button_show_previous_day_width">12dp</dimen>
+    <dimen name="work_list_button_show_previous_day_height">18dp</dimen>
+    <dimen name="work_list_button_show_previous_day_margin_top">10dp</dimen>
+    <dimen name="work_list_button_show_previous_day_margin_left">12dp</dimen>
+
+    <dimen name="work_list_button_show_next_day_width">12dp</dimen>
+    <dimen name="work_list_button_show_next_day_height">18dp</dimen>
+    <dimen name="work_list_button_show_next_day_margin_top">10dp</dimen>
+    <dimen name="work_list_button_show_next_day_margin_right">12dp</dimen>
+
+    <dimen name="work_list_list_date_text">18sp</dimen>
+    <dimen name="work_list_list_date_margin_top">8dp</dimen>
+
+    <dimen name="work_list_working_time_title_text">16sp</dimen>
+    <dimen name="work_list_working_time_title_margin_top">16dp</dimen>
+    <dimen name="work_list_working_time_title_margin_left">12dp</dimen>
+
+    <dimen name="work_list_working_time_value_text">16sp</dimen>
+    <dimen name="work_list_working_time_value_margin_top">20dp</dimen>
+
+    <dimen name="work_list_total_time_title_text">16sp</dimen>
+    <dimen name="work_list_total_time_title_margin_top">16dp</dimen>
+
+    <dimen name="work_list_total_time_value_text">16sp</dimen>
+    <dimen name="work_list_total_time_value_margin_top">20dp</dimen>
+    <dimen name="work_list_total_time_value_margin_right">12dp</dimen>
+
+
+    <!-- Work-list list item -->
+    <dimen name="work_list_list_item_category_text">22sp</dimen>
+
+    <dimen name="work_list_list_item_description_text">14sp</dimen>
+
+    <dimen name="work_list_list_item_period_text">16sp</dimen>
+    <dimen name="work_list_list_item_period_margin_top">3dp</dimen>
+
+    <dimen name="work_list_list_item_total_text">28sp</dimen>
+
+    <dimen name="work_list_list_item_bottom_divider_height">1dp</dimen>
+
     </resources>

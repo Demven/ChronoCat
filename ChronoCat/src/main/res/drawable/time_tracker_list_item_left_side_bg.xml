@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
     <gradient
             android:angle="0"
-            android:endColor="#000000"
-            android:startColor="@null"
+            android:startColor="@color/time_tracker_list_item_left_side_gradient_start"
+            android:endColor="@color/time_tracker_list_item_left_side_gradient_end"
             android:type="linear" />
 </shape>

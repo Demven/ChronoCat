@@ -13,7 +13,7 @@
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:cropToPadding="false">
+            android:layout_height="match_parent">
 
         <RelativeLayout
                 android:layout_width="match_parent"
@@ -23,19 +23,19 @@
 
             <Button
                     android:id="@+id/button_show_previous_day"
-                    android:layout_width="12dp"
-                    android:layout_height="18dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="12dp"
-                    android:background="@drawable/arrow_left_button_bg"
-                    android:layout_alignParentLeft="true"/>
+                    android:layout_width="@dimen/work_list_button_show_previous_day_width"
+                    android:layout_height="@dimen/work_list_button_show_previous_day_height"
+                    android:layout_marginTop="@dimen/work_list_button_show_previous_day_margin_top"
+                    android:layout_marginLeft="@dimen/work_list_button_show_previous_day_margin_left"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/arrow_left_button_bg"/>
 
             <Button
                     android:id="@+id/button_show_next_day"
-                    android:layout_width="12dp"
-                    android:layout_height="18dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="12dp"
+                    android:layout_width="@dimen/work_list_button_show_next_day_width"
+                    android:layout_height="@dimen/work_list_button_show_next_day_height"
+                    android:layout_marginTop="@dimen/work_list_button_show_next_day_margin_top"
+                    android:layout_marginRight="@dimen/work_list_button_show_next_day_margin_right"
                     android:layout_alignParentRight="true"
                     android:background="@drawable/arrow_right_button_bg"/>
 
@@ -43,55 +43,55 @@
                     android:id="@+id/list_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/work_list_list_date_margin_top"
                     android:gravity="center"
                     android:text="03.10.2014"
-                    android:textColor="#fff"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/work_list_list_date_text"
+                    android:textSize="@dimen/work_list_list_date_text"/>
 
             <TextView
                 android:id="@+id/working_time_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="12dp"
+                android:layout_marginTop="@dimen/work_list_working_time_title_margin_top"
+                android:layout_marginLeft="@dimen/work_list_working_time_title_margin_left"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@id/button_show_previous_day"
                 android:text="РАБОТА - "
-                android:textColor="#fff"
-                android:textSize="16sp"/>
+                android:textColor="@color/work_list_working_time_text"
+                android:textSize="@dimen/work_list_working_time_title_text"/>
             <TextView
                     android:id="@+id/working_time_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="@dimen/work_list_working_time_value_margin_top"
                     android:layout_toRightOf="@id/working_time_title"
                     android:layout_below="@id/button_show_previous_day"
                     android:text="03:14"
-                    android:textColor="#fff"
-                    android:textSize="16sp"/>
+                    android:textColor="@color/work_list_working_time_text"
+                    android:textSize="@dimen/work_list_working_time_value_text"/>
 
             <TextView
                     android:id="@+id/total_time_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/work_list_total_time_title_margin_top"
                     android:layout_toLeftOf="@+id/total_time_value"
                     android:layout_below="@id/button_show_next_day"
                     android:text="ВСЕГО - "
-                    android:textColor="#fff"
-                    android:textSize="16sp"/>
+                    android:textColor="@color/work_list_total_time_text"
+                    android:textSize="@dimen/work_list_total_time_title_text"/>
             <TextView
                     android:id="@id/total_time_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="@dimen/work_list_total_time_value_margin_top"
+                    android:layout_marginRight="@dimen/work_list_total_time_value_margin_right"
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/button_show_next_day"
                     android:text="04:57"
-                    android:textColor="#fff"
-                    android:textSize="16sp"/>
+                    android:textColor="@color/work_list_total_time_text"
+                    android:textSize="@dimen/work_list_total_time_value_text"/>
         </RelativeLayout>
 
         <RelativeLayout
