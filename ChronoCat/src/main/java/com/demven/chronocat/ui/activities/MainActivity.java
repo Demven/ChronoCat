@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import com.demven.chronocat.R;
 import com.demven.chronocat.ui.OnClickMethods;
+import com.demven.chronocat.ui.fragments.GraphsFragment;
 import com.demven.chronocat.ui.fragments.LaunchFragment;
 import com.demven.chronocat.ui.fragments.TimeTrackerFragment;
 import com.demven.chronocat.ui.fragments.WorkListFragment;
@@ -61,6 +62,9 @@ public class MainActivity extends FragmentActivity implements OnClickMethods{
                 .commit();
     }
 
+
+    /* Implementation of OnClickMethods */
+
     @Override
     public void showList(View view) {
         getSupportFragmentManager().beginTransaction()
@@ -71,6 +75,9 @@ public class MainActivity extends FragmentActivity implements OnClickMethods{
 
     @Override
     public void showGraphs(View view) {
-        // TODO
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.fragment_container, new GraphsFragment())
+                .addToBackStack(null)
+                .commit();
     }
 }

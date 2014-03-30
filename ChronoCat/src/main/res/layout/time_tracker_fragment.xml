@@ -38,7 +38,8 @@
                     android:layout_marginTop="@dimen/time_tracker_button_show_graphs_margin_top"
                     android:layout_marginRight="@dimen/time_tracker_button_show_graphs_margin_right"
                     android:layout_alignParentRight="true"
-                    android:background="@drawable/time_tracker_show_graphs_button_bg"/>
+                    android:background="@drawable/time_tracker_show_graphs_button_bg"
+                    android:onClick="showGraphs"/>
 
             <Button
                     android:id="@+id/button_all_works"
